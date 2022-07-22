@@ -1,38 +1,29 @@
 package com.company;
 
-public class Hotel implements Famili {
+import java.util.Arrays;
 
-    private String addres;
+public class Hotel extends Home{
+
+    public Hotel(Person[] people) {
+        super(people);
+    }
+
+
+
+    @Override
+    void komUslugi() {
+        System.out.println("ком ус толойбу Жок");
+    }
+
+    @Override
+    void arenda() {
+        System.out.println("аренда толойбу Ооба");
+    }
 
     @Override
     public String toString() {
-        return addres;
-    }
-
-    public String getAddres() {
-        return addres;
-    }
-
-    public void setAddres(String addres) {
-        this.addres = addres;
-    }
-
-    public Hotel(String addres) {
-        this.addres = addres;
-    }
-
-    static int kol = 0;
-
-    static void family(String... name) {
-        for (int i = 0; i < name.length; i++) {
-            System.out.println(name[i]);
-            kol++;
-        }
-        System.out.println("Hotel " + kol + " lived");
-    }
-
-    @Override
-    public void many() {
-        System.out.println("аренда 20000");
+        return "Hotel{" +
+                "people=" + Arrays.toString(people) +
+                '}';
     }
 }

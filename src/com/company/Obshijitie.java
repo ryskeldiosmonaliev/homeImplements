@@ -1,37 +1,28 @@
 package com.company;
 
-public class Obshijitie implements Famili  {
-    private  String addres;
+import java.util.Arrays;
+
+public class Obshijitie extends Home {
+
+
+    public Obshijitie(Person[] people) {
+        super(people);
+    }
+
+    @Override
+    void komUslugi() {
+        System.out.println("ком ус толойбу Жок");
+    }
+
+    @Override
+    void arenda() {
+        System.out.println("аренда толойбу Ооба");
+    }
 
     @Override
     public String toString() {
-        return addres;
+        return "Obshijitie{" +
+                "people=" + Arrays.toString(people) +
+                '}';
     }
-
-    public String getAddres() {
-        return addres;
-    }
-
-    public void setAddres(String addres) {
-        this.addres = addres;
-    }
-
-    public Obshijitie(String addres) {
-        this.addres = addres;
-    }
-
-    static int kol = 0;
-    static void famil1(String ... name){
-        for (int i = 0; i < name.length; i++) {
-            System.out.println(name[i]);
-            kol++;
-        }
-        System.out.println("общитжитда "+kol +" lived");
-    }
-    @Override
-    public void many() {
-        System.out.println("аренда общтжитие 15000");
-    }
-
-
 }

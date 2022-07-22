@@ -1,38 +1,30 @@
 package com.company;
 
-public class Kvartira implements Famili {
-    private String addres;
+import java.util.Arrays;
 
-    public String getAddres() {
-        return addres;
-    }
+public class Kvartira extends Home {
 
-    public void setAddres(String addres) {
-        this.addres = addres;
+    public Kvartira(Person[] people) {
+        super(people);
     }
-
-    public Kvartira(String addres) {
-        this.addres = addres;
-    }
-
-    static int kol = 0;
-static void famili(String ... name){
-    for (int i = 0; i < name.length; i++) {
-        System.out.println(name[i]);
-        kol++;
-    }
-    System.out.println("квартирада "+kol +" lived");
-}
 
     @Override
-    public void many() {
-        System.out.println(" ком услуги 70000");
+    void komUslugi() {
+        System.out.println("ком усю толойбу Ооба");
+    }
+
+    @Override
+    void arenda() {
+        System.out.println(" аренда толойбу Жок");
     }
 
     @Override
     public String toString() {
-        return addres ;
-    }}
+        return "Kvartira{" +
+                "people=" + Arrays.toString(people) +
+                '}';
+    }
+}
 
 
 
